@@ -1,0 +1,27 @@
+
+    <form [formGroup]="form">
+
+        <div class="form-group">
+            <label for="exampleInputUsername">Username</label>
+            <input formControlName="username" type="text" class="form-control" id="exampleInputUsername"
+                placeholder="Username">
+        </div>
+
+        <div class="form-group" *ngIf="alreadyMember">
+            <label for="exampleInputEmail1">Email address</label>
+            <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1"
+                placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+        <a *ngIf="!alreadyMember" class="form-text text-muted" (click)="toggle()">Already a member ? Click for
+            sign in </a>
+        <a *ngIf="!notMember" class="form-text text-muted" (click)="toggle1()" >Not a member ? Click for sign up
+        </a>
+    </form>
+    {{this.form.value | json}}
