@@ -7,12 +7,14 @@ import { AmplifyService, AmplifyAngularModule } from 'aws-amplify-angular';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { MainComponent } from './main/main.component';
+import { ConfirmSignupComponent } from './confirm-signup/confirm-signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    MainComponent
+    MainComponent,
+    ConfirmSignupComponent
   ],
   imports: [
     BrowserModule,

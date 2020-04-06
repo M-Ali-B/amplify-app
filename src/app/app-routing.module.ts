@@ -3,12 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
+import { ConfirmSignupComponent } from './confirm-signup/confirm-signup.component';
 
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'app', component: AppComponent },
-     { path: 'main', component: MainComponent },
+    { path: 'main', component: MainComponent },
+    {path: 'confirm-signup', component: ConfirmSignupComponent},
     { path: '', redirectTo: '/app', pathMatch: 'full' }
 ];
 

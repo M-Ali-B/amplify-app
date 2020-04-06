@@ -1,0 +1,16 @@
+<form [formGroup]="form">
+
+    <div class="form-group">
+        <label for="exampleInputUsername">Username</label>
+        <input formControlName="username" type="text" class="form-control" id="exampleInputUsername"
+            placeholder="Username">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputCode">Username</label>
+        <input formControlName="code" type="text" class="form-control" id="exampleInputCode" placeholder="code">
+    </div>
+
+    <button class="btn btn-primary" (click)="confirmUserSignUp()">Confirm SignUp!</button>
+    <a class="form-text text-muted" (click)="toSignUp()">back to home</a>
+</form>
