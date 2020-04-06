@@ -7,7 +7,7 @@
                 placeholder="Username">
         </div>
 
-        <div class="form-group" *ngIf="alreadyMember">
+        <div class="form-group" *ngIf="!notMember">
             <label for="exampleInputEmail1">Email address</label>
             <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1"
                 aria-describedby="emailHelp" placeholder="Enter email">
@@ -19,9 +19,9 @@
                 placeholder="Password">
         </div>
         <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
-        <a *ngIf="!alreadyMember" class="form-text text-muted" (click)="toggle()">Already a member ? Click for
+        <a *ngIf="alreadyMember" class="form-text text-muted" (click)="toggle()">Already a member ? Click for
             sign in </a>
-        <a *ngIf="!notMember" class="form-text text-muted" (click)="toggle1()" >Not a member ? Click for sign up
+        <a *ngIf="notMember" class="form-text text-muted" (click)="toggle1()" >Not a member ? Click for sign up
         </a>
     </form>
     {{this.form.value | json}}

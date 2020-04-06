@@ -91,30 +91,30 @@ export class MainComponent implements OnInit {
 
     toggle() {
         this.form.reset();
-        this.alreadyMember = true;
-        this.notMember = false;
-    }
-
-    toggle1() {
-      //  this.form.reset();
         this.alreadyMember = false;
         this.notMember = true;
     }
 
-    onSubmit() {
-        // if(!this.alreadyMember){
-        // const user = auth.signIn(this.form.value.username, this.form.value.password)
-        //     .then(data => {
-        //         console.log(data);
-        //         if (data) {
-        //             this.router.navigateByUrl('/home');
-        //         }
-        //     })
-        //     .catch(err => console.log(err.message));
+    toggle1() {
+      //  this.form.reset();
+        this.alreadyMember = true;
+        this.notMember = false;
+    }
 
-        // console.log(user);
-        // }
-        // if(!this.notMember){
+    onSubmit() {
+        if (!this.alreadyMember) {
+        const user = auth.signIn(this.form.value.username, this.form.value.password)
+            .then(data => {
+                console.log(data);
+                if (data) {
+                    this.router.navigateByUrl('/home');
+                }
+            })
+            .catch(err => console.log(err.message));
+
+        console.log(user);
+        }
+        if (!this.notMember) {
               // code for user signup
 
         auth.signUp({
@@ -138,8 +138,8 @@ export class MainComponent implements OnInit {
         //     }).then(data => console.log(data))
         //         .catch(err => console.log(err));
         // }
-        
-    // }
+
+    }
     }
 }
  // code for confirmation code resent
