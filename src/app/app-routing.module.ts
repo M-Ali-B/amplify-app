@@ -4,13 +4,15 @@ import { HomeComponent } from './home/home.component';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { ConfirmSignupComponent } from './confirm-signup/confirm-signup.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'app', component: AppComponent },
     { path: 'main', component: MainComponent },
-    {path: 'confirm-signup', component: ConfirmSignupComponent},
+    { path: 'confirm-signup', component: ConfirmSignupComponent },
+    { path: 'change-password', component: ChangePasswordComponent },
     { path: '', redirectTo: '/app', pathMatch: 'full' }
 ];
 
