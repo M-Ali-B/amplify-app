@@ -27,14 +27,23 @@ export class HomeComponent implements OnInit {
             .catch(err => console.log(err));
 
         this.getWindow().localStorage.clear();
-        this.router.navigateByUrl('/')
+        this.router.navigateByUrl('/');
 
     }
 
-    getSession(){
+    getSession() {
         auth.currentSession()
             .then(data => console.log(data))
             .catch(err => console.log(err));
+    }
+
+    changePassword() {
+        // auth.currentAuthenticatedUser()
+        //     .then(user => {
+        //         return Auth.changePassword(user, 'oldPassword', 'newPassword');
+        //     })
+        //     .then(data => console.log(data))
+        //     .catch(err => console.log(err));
     }
 
 }
