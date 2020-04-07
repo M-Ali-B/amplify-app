@@ -31,6 +31,11 @@ export class HomeComponent implements OnInit {
 
     }
 
+    getSession(){
+        auth.currentSession()
+            .then(data => console.log(data))
+            .catch(err => console.log(err));
+    }
 
 }
 
