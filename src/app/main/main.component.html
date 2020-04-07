@@ -18,6 +18,7 @@
             <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1"
                 placeholder="Password">
         </div>
+        <a *ngIf="notMember" class="form-text text-muted" (click)="forgotPassword()">forgot password ?</a>
         <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
         <a *ngIf="alreadyMember" class="form-text text-muted" (click)="toggle()">Already a member ? Click for
             sign in </a>

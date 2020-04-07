@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { ConfirmSignupComponent } from './confirm-signup/confirm-signup.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
     { path: 'main', component: MainComponent },
     { path: 'confirm-signup', component: ConfirmSignupComponent },
     { path: 'change-password', component: ChangePasswordComponent },
+    { path: 'forgot-password', component: ForgotPasswordComponent },
     { path: '', redirectTo: '/app', pathMatch: 'full' }
 ];
 

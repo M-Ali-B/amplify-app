@@ -77,4 +77,8 @@ export class MainComponent implements OnInit {
                 .catch(err => console.log(err));
         }
     }
+
+    forgotPassword(){
+        this.router.navigateByUrl('/forgot-password');
+    }
 }
